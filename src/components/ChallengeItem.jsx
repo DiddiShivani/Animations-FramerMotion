@@ -36,20 +36,29 @@ export default function ChallengeItem({
             <h2>{challenge.title}</h2>
             <p>Complete until {formattedDate}</p>
             <p className="challenge-item-actions">
-              <button onClick={handleCancel} className="btn-negative">
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              onClick={handleCancel} className="btn-negative">
                 Mark as failed
-              </button>
-              <button onClick={handleComplete}>Mark as completed</button>
+              </motion.button>
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              onClick={handleComplete}>Mark as completed</motion.button>
             </p>
           </div>
         </header>
         <div className="challenge-item-details">
           <p>
-            <button onClick={onViewDetails}>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }} 
+              onClick={onViewDetails}>
               View Details{' '}
               <motion.span 
               animate = {{rotate: isExpanded?180:0}} className="challenge-item-details-icon">&#9650;</motion.span>
-            </button>
+            </motion.button>
           </p>
 
           <AnimatePresence>

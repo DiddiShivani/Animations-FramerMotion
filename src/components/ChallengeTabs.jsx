@@ -4,13 +4,15 @@ import { motion } from 'framer-motion';
 function Tab({ isSelected, onSelect, badgeCaption, children }) {
   return (
     <li>
-      <button
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         className={isSelected ? 'selected' : undefined}
         onClick={onSelect}
       >
         {children}
         <Badge key={badgeCaption} caption={badgeCaption}></Badge>
-      </button>
+      </motion.button>
       {isSelected && <motion.div layoutId = "tab-indicator" className="active-tab-indicator" />}
     </li>
   );

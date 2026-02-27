@@ -26,7 +26,7 @@ export default function Header() {
         whileHover={{
           scale:1.1, 
           backgroundColor:'#8b11f0'
-        }}
+        }} whileTap={{scale:0.95}}
         transition={{type:'spring', stiff:500}}
         onClick={handleStartAddNewChallenge} className="button">
           Add Challenge

@@ -82,10 +82,15 @@ export default function NewChallenge({ onDone }) {
         </motion.ul>
 
         <p className="new-challenge-actions">
-          <button type="button" onClick={onDone}>
-            Cancel
-          </button>
-          <button>Add Challenge</button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            type="button" onClick={onDone}
+          >Cancel</motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >Add Challenge</motion.button>
         </p>
       </form>
     </Modal>

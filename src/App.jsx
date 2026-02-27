@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
+import { AnimatePresence } from 'framer-motion';
 import WelcomePage from './pages/Welcome.jsx';
 import ChallengesPage from './pages/Challenges.jsx';
 
@@ -9,7 +9,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AnimatePresence mode="wait">
+      <RouterProvider router={router} />
+    </AnimatePresence>
+  );
 }
 
 export default App;
